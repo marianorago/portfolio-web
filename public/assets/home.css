@@ -43,26 +43,40 @@ body.dark-mode {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: rgba(248, 247, 246, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(236, 164, 19, 0.2);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-body.dark-mode .navbar {
-  background-color: rgba(34, 28, 16, 0.8);
+.navbar.scrolled {
+  background-color: rgba(248, 247, 246, 0.98);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(236, 164, 19, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .navbar.scrolled {
+  background-color: rgba(34, 28, 16, 0.98);
+  border-bottom: 1px solid rgba(236, 164, 19, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar__brand {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--text-light);
+  color: #ffffff;
   transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-mode .navbar__brand {
+.navbar.scrolled .navbar__brand {
+  color: var(--text-light);
+  text-shadow: none;
+}
+
+body.dark-mode .navbar.scrolled .navbar__brand {
   color: var(--text-dark);
 }
 
@@ -75,15 +89,21 @@ body.dark-mode .navbar__brand {
 }
 
 .navbar__links a {
-  color: var(--text-light);
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-mode .navbar__links a {
+.navbar.scrolled .navbar__links a {
+  color: var(--text-light);
+  text-shadow: none;
+}
+
+body.dark-mode .navbar.scrolled .navbar__links a {
   color: var(--text-dark);
 }
 
@@ -115,17 +135,21 @@ body.dark-mode .navbar__links a {
   align-items: center;
   justify-content: center;
   padding-top: 80px;
+  background-image: url('/assets/bg-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(236, 164, 19, 0.05) 0%, rgba(248, 247, 246, 0) 70%);
+  background: linear-gradient(to bottom, rgba(34, 28, 16, 0.7) 0%, rgba(34, 28, 16, 0.4) 100%);
   z-index: 1;
 }
 
 body.dark-mode .hero__overlay {
-  background: radial-gradient(circle at center, rgba(236, 164, 19, 0.1) 0%, rgba(34, 28, 16, 0) 70%);
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8) 0%, rgba(18, 18, 18, 0.5) 100%);
 }
 
 .hero__content {
@@ -141,27 +165,29 @@ body.dark-mode .hero__overlay {
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  color: var(--text-light);
+  color: #ffffff;
   letter-spacing: -0.02em;
   transition: color 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 body.dark-mode .hero__content h1 {
-  color: var(--text-dark);
+  color: #ffffff;
 }
 
 .hero__content p {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  color: rgba(34, 28, 16, 0.7);
+  color: #f0f0f0;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 body.dark-mode .hero__content p {
-  color: rgba(248, 247, 246, 0.7);
+  color: #f0f0f0;
 }
 
 .hero__buttons {
@@ -199,25 +225,26 @@ body.dark-mode .hero__content p {
 
 .btn--outline {
   background: transparent;
-  color: var(--text-light);
-  border: 2px solid var(--text-light);
+  color: var(--primary);
+  border: 2px solid var(--primary);
   transition: all 0.3s ease;
 }
 
 body.dark-mode .btn--outline {
-  color: var(--text-dark);
-  border: 2px solid var(--text-dark);
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn--outline:hover {
-  background: rgba(34, 28, 16, 0.1);
+  background: transparent;
   color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-2px);
 }
 
 body.dark-mode .btn--outline:hover {
-  background: rgba(248, 247, 246, 0.1);
+  background: transparent;
+  color: var(--primary);
 }
 
 /* Section Styles */

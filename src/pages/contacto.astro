@@ -12,6 +12,7 @@ import Layout from '../layouts/Layout.astro';
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+			<script src="/assets/navbar-scroll.js" defer></script>
 		</head>
 		<body>
 			<nav class="navbar">
@@ -29,8 +30,8 @@ import Layout from '../layouts/Layout.astro';
 			<section class="hero">
 				<div class="hero__overlay"></div>
 				<div class="hero__content">
-					<h1>Contacto</h1>
-					<p>Estamos aquí para ayudarte a hacer realidad tus ideas arquitectónicas</p>
+					<h1 class="fade-in">Contacto</h1>
+					<p class="fade-in">Estamos aquí para ayudarte a hacer realidad tus ideas arquitectónicas</p>
 				</div>
 			</section>
 			
@@ -38,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
 			<section id="contacto" class="contact">
 				<div class="container">
 					<div class="contact__content">
-						<div class="contact__info">
+						<div class="contact__info slide-in-left">
 							<h3>Hablemos de tu proyecto</h3>
 							<p>Estamos aquí para ayudarte a hacer realidad tus ideas arquitectónicas. Contáctanos para una consulta inicial.</p>
 							<div class="contact__details">
@@ -65,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
 								<a href="#" class="social-link">BE</a>
 							</div>
 						</div>
-						<form class="contact__form">
+						<form class="contact__form slide-in-right">
 							<div class="form-group">
 								<label for="name">Nombre</label>
 								<input type="text" id="name" name="name" required>
@@ -104,13 +105,13 @@ import Layout from '../layouts/Layout.astro';
 			<section class="services">
 				<div class="container">
 					<h2 class="section-title">Ubicación</h2>
-					<div style="width: 100%; height: 400px; background-color: var(--background-light); border-radius: 12px; overflow: hidden; border: 1px solid rgba(34, 28, 16, 0.05);">
-						<iframe 
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.955899538577!2d-58.38155758477037!3d-34.60841248045948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac5b5e5c5b5%3A0x1234567890abcdef!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus" 
-							width="100%" 
-							height="100%" 
-							style="border:0;" 
-							allowfullscreen="" 
+					<div class="scale-in" style="width: 100%; height: 400px; background-color: var(--background-light); border-radius: 12px; overflow: hidden; border: 1px solid rgba(34, 28, 16, 0.05);">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.955899538577!2d-58.38155758477037!3d-34.60841248045948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac5b5e5c5b5%3A0x1234567890abcdef!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus"
+							width="100%"
+							height="100%"
+							style="border:0;"
+							allowfullscreen=""
 							loading="lazy">
 						</iframe>
 					</div>
@@ -178,19 +179,6 @@ import Layout from '../layouts/Layout.astro';
 		}
 	});
 	
-	// Smooth scrolling for navigation links
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-			const target = document.querySelector(this.getAttribute('href'));
-			if (target) {
-				target.scrollIntoView({
-					behavior: 'smooth',
-					block: 'start'
-				});
-			}
-		});
-	});
 	
 	// Form submission
 	const contactForm = document.querySelector('.contact__form');

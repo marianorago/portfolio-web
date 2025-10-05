@@ -453,3 +453,69 @@ section {
     gap: 20px;
   }
 }
+
+/* Animation Optimizations */
+/* Slower animations for a more elegant feel */
+.animate__animated {
+  --animate-duration: 1s;
+}
+
+/* Faster entrance animations */
+.animate__fadeIn,
+.animate__fadeInDown,
+.animate__fadeInUp,
+.animate__fadeInLeft,
+.animate__fadeInRight {
+  --animate-duration: 0.8s;
+}
+
+/* Slightly slower zoom animations for emphasis */
+.animate__zoomIn {
+  --animate-duration: 1.2s;
+}
+
+/* Reduce delay times for better flow */
+.animate__delay-1s {
+  animation-delay: 0.5s;
+}
+
+.animate__delay-2s {
+  animation-delay: 1s;
+}
+
+.animate__delay-3s {
+  animation-delay: 1.5s;
+}
+
+.animate__delay-4s {
+  animation-delay: 2s;
+}
+
+.animate__delay-5s {
+  animation-delay: 2.5s;
+}
+
+/* Add hover effects to animated elements */
+.service-card:hover,
+.portfolio-item:hover {
+  animation-duration: 0.3s;
+}
+
+.animate__animated:hover {
+  animation-play-state: paused;
+}
+
+/* Improve animation performance on mobile */
+@media (max-width: 768px) {
+  .animate__animated {
+    --animate-duration: 0.6s;
+  }
+  
+  .animate__delay-1s,
+  .animate__delay-2s,
+  .animate__delay-3s,
+  .animate__delay-4s,
+  .animate__delay-5s {
+    animation-delay: 0.2s;
+  }
+}
