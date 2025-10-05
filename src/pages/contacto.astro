@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
 		<head>
 			<meta charset="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<title>Mariano Rago | Arquitectura</title>
+			<title>Contacto | Mariano Rago</title>
 			<link rel="stylesheet" href="/assets/home.css" />
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,11 @@ import Layout from '../layouts/Layout.astro';
 			<nav class="navbar">
 				<div class="navbar__brand">Mariano Rago</div>
 				<ul class="navbar__links">
-					<li><a href="#servicios">Servicios</a></li>
-					<li><a href="#proyectos">Proyectos</a></li>
-					<li><a href="#sobre-mi">Sobre Mí</a></li>
-					<li><a href="#contacto">Contacto</a></li>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/servicios">Servicios</a></li>
+					<li><a href="/proyectos">Proyectos</a></li>
+					<li><a href="/sobre-mi">Sobre Mí</a></li>
+					<li><a href="/contacto" class="active">Contacto</a></li>
 				</ul>
 			</nav>
 			
@@ -28,90 +29,14 @@ import Layout from '../layouts/Layout.astro';
 			<section class="hero">
 				<div class="hero__overlay"></div>
 				<div class="hero__content">
-					<h1>Diseñamos espacios que inspiran</h1>
-					<p>Arquitectura minimalista con un enfoque en la funcionalidad y estética contemporánea</p>
-					<div class="hero__buttons">
-						<a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-						<a href="#contacto" class="btn btn--outline">Contáctame</a>
-					</div>
-				</div>
-			</section>
-			
-			<!-- Services Section -->
-			<section id="servicios" class="services">
-				<div class="container">
-					<h2 class="section-title">Nuestros Servicios</h2>
-					<div class="services__grid">
-						<div class="service-card">
-							<div class="service-card__icon">🏢</div>
-							<h3>Diseño Arquitectónico</h3>
-							<p>Creación de espacios innovadores que combinan funcionalidad y estética.</p>
-						</div>
-						<div class="service-card">
-							<div class="service-card__icon">🏗️</div>
-							<h3>Construcción</h3>
-							<p>Ejecución de proyectos con los más altos estándares de calidad y sostenibilidad.</p>
-						</div>
-						<div class="service-card">
-							<div class="service-card__icon">🎨</div>
-							<h3>Diseño de Interiores</h3>
-							<p>Transformación de espacios interiores para reflejar tu estilo y necesidades.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- Portfolio Section -->
-			<section id="proyectos" class="portfolio">
-				<div class="container">
-					<h2 class="section-title">Proyectos Destacados</h2>
-					<div class="portfolio__grid">
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Casa Minimalista</h3>
-								<p>Diseño residencial con enfoque en espacios abiertos y luz natural</p>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Oficina Corporativa</h3>
-								<p>Espacios de trabajo diseñados para la productividad y el bienestar</p>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Restaurante Moderno</h3>
-								<p>Diseño de espacios gastronómicos con identidad única</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- About Section -->
-			<section id="sobre-mi" class="services">
-				<div class="container">
-					<h2 class="section-title">Sobre Mí</h2>
-					<div class="contact__content">
-						<div class="contact__info">
-							<h3>Mariano Rago</h3>
-							<p>Soy un arquitecto con más de 15 años de experiencia en el diseño y construcción de espacios innovadores. Mi enfoque se centra en crear proyectos que combinen funcionalidad, estética y sostenibilidad.</p>
-							<p>A lo largo de mi carrera, he trabajado en una amplia variedad de proyectos, desde residencias privadas hasta espacios comerciales y públicos, siempre buscando superar las expectativas de mis clientes.</p>
-						</div>
-						<div class="contact__form">
-							<img src="https://via.placeholder.com/500x400" alt="Mariano Rago" style="width: 100%; border-radius: 8px;">
-						</div>
-					</div>
+					<h1>Contacto</h1>
+					<p>Estamos aquí para ayudarte a hacer realidad tus ideas arquitectónicas</p>
 				</div>
 			</section>
 			
 			<!-- Contact Section -->
 			<section id="contacto" class="contact">
 				<div class="container">
-					<h2 class="section-title">Contacto</h2>
 					<div class="contact__content">
 						<div class="contact__info">
 							<h3>Hablemos de tu proyecto</h3>
@@ -129,6 +54,15 @@ import Layout from '../layouts/Layout.astro';
 									<span class="contact-detail__icon">📍</span>
 									<span>Buenos Aires, Argentina</span>
 								</div>
+								<div class="contact-detail">
+									<span class="contact-detail__icon">🕒</span>
+									<span>Lunes a Viernes: 9:00 - 18:00</span>
+								</div>
+							</div>
+							<div class="footer__social" style="margin-top: 30px;">
+								<a href="#" class="social-link">IG</a>
+								<a href="#" class="social-link">LI</a>
+								<a href="#" class="social-link">BE</a>
 							</div>
 						</div>
 						<form class="contact__form">
@@ -141,11 +75,44 @@ import Layout from '../layouts/Layout.astro';
 								<input type="email" id="email" name="email" required>
 							</div>
 							<div class="form-group">
+								<label for="phone">Teléfono</label>
+								<input type="tel" id="phone" name="phone">
+							</div>
+							<div class="form-group">
+								<label for="service">Servicio de Interés</label>
+								<select id="service" name="service" style="width: 100%; padding: 12px 15px; background-color: var(--background-light); border: 1px solid rgba(34, 28, 16, 0.1); border-radius: 8px; color: var(--text-light); font-family: inherit;">
+									<option value="">Selecciona un servicio</option>
+									<option value="diseño-arquitectonico">Diseño Arquitectónico</option>
+									<option value="direccion-obra">Dirección de Obra</option>
+									<option value="diseño-interiores">Diseño de Interiores</option>
+									<option value="modelado-3d">Modelado 3D</option>
+									<option value="renderizado">Renderizado</option>
+									<option value="asesoramiento">Asesoramiento</option>
+								</select>
+							</div>
+							<div class="form-group">
 								<label for="message">Mensaje</label>
 								<textarea id="message" name="message" rows="5" required></textarea>
 							</div>
 							<button type="submit" class="btn btn--primary">Enviar mensaje</button>
 						</form>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Map Section -->
+			<section class="services">
+				<div class="container">
+					<h2 class="section-title">Ubicación</h2>
+					<div style="width: 100%; height: 400px; background-color: var(--background-light); border-radius: 12px; overflow: hidden; border: 1px solid rgba(34, 28, 16, 0.05);">
+						<iframe 
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.955899538577!2d-58.38155758477037!3d-34.60841248045948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac5b5e5c5b5%3A0x1234567890abcdef!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus" 
+							width="100%" 
+							height="100%" 
+							style="border:0;" 
+							allowfullscreen="" 
+							loading="lazy">
+						</iframe>
 					</div>
 				</div>
 			</section>
@@ -224,4 +191,26 @@ import Layout from '../layouts/Layout.astro';
 			}
 		});
 	});
+	
+	// Form submission
+	const contactForm = document.querySelector('.contact__form');
+	if (contactForm) {
+		contactForm.addEventListener('submit', function(e) {
+			e.preventDefault();
+			
+			// Get form values
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const phone = document.getElementById('phone').value;
+			const service = document.getElementById('service').value;
+			const message = document.getElementById('message').value;
+			
+			// Here you would normally send the form data to a server
+			// For this example, we'll just show a success message
+			alert('Gracias por tu mensaje. Te contactaremos pronto.');
+			
+			// Reset form
+			contactForm.reset();
+		});
+	}
 </script>

@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
 		<head>
 			<meta charset="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<title>Mariano Rago | Arquitectura</title>
+			<title>Sobre Mí | Mariano Rago</title>
 			<link rel="stylesheet" href="/assets/home.css" />
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,11 @@ import Layout from '../layouts/Layout.astro';
 			<nav class="navbar">
 				<div class="navbar__brand">Mariano Rago</div>
 				<ul class="navbar__links">
-					<li><a href="#servicios">Servicios</a></li>
-					<li><a href="#proyectos">Proyectos</a></li>
-					<li><a href="#sobre-mi">Sobre Mí</a></li>
-					<li><a href="#contacto">Contacto</a></li>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/servicios">Servicios</a></li>
+					<li><a href="/proyectos">Proyectos</a></li>
+					<li><a href="/sobre-mi" class="active">Sobre Mí</a></li>
+					<li><a href="/contacto">Contacto</a></li>
 				</ul>
 			</nav>
 			
@@ -28,124 +29,86 @@ import Layout from '../layouts/Layout.astro';
 			<section class="hero">
 				<div class="hero__overlay"></div>
 				<div class="hero__content">
-					<h1>Diseñamos espacios que inspiran</h1>
-					<p>Arquitectura minimalista con un enfoque en la funcionalidad y estética contemporánea</p>
-					<div class="hero__buttons">
-						<a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-						<a href="#contacto" class="btn btn--outline">Contáctame</a>
-					</div>
-				</div>
-			</section>
-			
-			<!-- Services Section -->
-			<section id="servicios" class="services">
-				<div class="container">
-					<h2 class="section-title">Nuestros Servicios</h2>
-					<div class="services__grid">
-						<div class="service-card">
-							<div class="service-card__icon">🏢</div>
-							<h3>Diseño Arquitectónico</h3>
-							<p>Creación de espacios innovadores que combinan funcionalidad y estética.</p>
-						</div>
-						<div class="service-card">
-							<div class="service-card__icon">🏗️</div>
-							<h3>Construcción</h3>
-							<p>Ejecución de proyectos con los más altos estándares de calidad y sostenibilidad.</p>
-						</div>
-						<div class="service-card">
-							<div class="service-card__icon">🎨</div>
-							<h3>Diseño de Interiores</h3>
-							<p>Transformación de espacios interiores para reflejar tu estilo y necesidades.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- Portfolio Section -->
-			<section id="proyectos" class="portfolio">
-				<div class="container">
-					<h2 class="section-title">Proyectos Destacados</h2>
-					<div class="portfolio__grid">
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Casa Minimalista</h3>
-								<p>Diseño residencial con enfoque en espacios abiertos y luz natural</p>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Oficina Corporativa</h3>
-								<p>Espacios de trabajo diseñados para la productividad y el bienestar</p>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-item__image"></div>
-							<div class="portfolio-item__overlay">
-								<h3>Restaurante Moderno</h3>
-								<p>Diseño de espacios gastronómicos con identidad única</p>
-							</div>
-						</div>
-					</div>
+					<h1>Sobre Mí</h1>
+					<p>Conoce la filosofía y experiencia detrás de Rago Design</p>
 				</div>
 			</section>
 			
 			<!-- About Section -->
-			<section id="sobre-mi" class="services">
+			<section class="services">
 				<div class="container">
-					<h2 class="section-title">Sobre Mí</h2>
 					<div class="contact__content">
 						<div class="contact__info">
 							<h3>Mariano Rago</h3>
-							<p>Soy un arquitecto con más de 15 años de experiencia en el diseño y construcción de espacios innovadores. Mi enfoque se centra en crear proyectos que combinen funcionalidad, estética y sostenibilidad.</p>
-							<p>A lo largo de mi carrera, he trabajado en una amplia variedad de proyectos, desde residencias privadas hasta espacios comerciales y públicos, siempre buscando superar las expectativas de mis clientes.</p>
+							<p>Soy un arquitecto y diseñador con más de 15 años de experiencia en el campo. Mi enfoque se centra en crear espacios que no solo sean estéticamente agradables, sino también funcionales y sostenibles.</p>
+							<p>Con una pasión por la innovación y la atención al detalle, he liderado proyectos que van desde residencias privadas hasta espacios comerciales y públicos, siempre buscando un equilibrio perfecto entre forma y función.</p>
+							<a href="/proyectos" class="btn btn--primary" style="margin-top: 20px; display: inline-block;">Ver Proyectos</a>
 						</div>
 						<div class="contact__form">
-							<img src="https://via.placeholder.com/500x400" alt="Mariano Rago" style="width: 100%; border-radius: 8px;">
+							<img src="https://via.placeholder.com/500x600" alt="Mariano Rago" style="width: 100%; border-radius: 8px;">
 						</div>
 					</div>
 				</div>
 			</section>
 			
-			<!-- Contact Section -->
-			<section id="contacto" class="contact">
+			<!-- Experience Section -->
+			<section class="portfolio">
 				<div class="container">
-					<h2 class="section-title">Contacto</h2>
+					<h2 class="section-title">Experiencia</h2>
+					<div class="services__grid">
+						<div class="service-card">
+							<div class="service-card__icon">🏢</div>
+							<h3>Diseño Arquitectónico</h3>
+							<p>Más de 15 años diseñando espacios residenciales y comerciales con un enfoque en la funcionalidad y estética contemporánea.</p>
+						</div>
+						<div class="service-card">
+							<div class="service-card__icon">🏗️</div>
+							<h3>Dirección de Obra</h3>
+							<p>Experiencia en la supervisión y gestión de construcciones, asegurando la correcta ejecución de los proyectos.</p>
+						</div>
+						<div class="service-card">
+							<div class="service-card__icon">🎨</div>
+							<h3>Diseño de Interiores</h3>
+							<p>Especialización en la transformación de espacios interiores para crear ambientes únicos y personalizados.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Education Section -->
+			<section class="services">
+				<div class="container">
+					<h2 class="section-title">Formación</h2>
 					<div class="contact__content">
 						<div class="contact__info">
-							<h3>Hablemos de tu proyecto</h3>
-							<p>Estamos aquí para ayudarte a hacer realidad tus ideas arquitectónicas. Contáctanos para una consulta inicial.</p>
+							<h3>Educación y Certificaciones</h3>
 							<div class="contact__details">
 								<div class="contact-detail">
-									<span class="contact-detail__icon">📧</span>
-									<span>info@marianorago.com</span>
+									<span class="contact-detail__icon">🎓</span>
+									<div>
+										<strong>Arquitectura</strong><br>
+										Universidad de Buenos Aires<br>
+										2005-2011
+									</div>
 								</div>
 								<div class="contact-detail">
-									<span class="contact-detail__icon">📱</span>
-									<span>+54 9 11 1234 5678</span>
+									<span class="contact-detail__icon">📜</span>
+									<div>
+										<strong>Diseño Sostenible</strong><br>
+										Certificación LEED GA<br>
+										2013
+									</div>
 								</div>
 								<div class="contact-detail">
-									<span class="contact-detail__icon">📍</span>
-									<span>Buenos Aires, Argentina</span>
+									<span class="contact-detail__icon">🏆</span>
+									<div>
+										<strong>Diseño de Interiores</strong><br>
+										Diplomatura en Diseño de Interiores<br>
+										2015
+									</div>
 								</div>
 							</div>
 						</div>
-						<form class="contact__form">
-							<div class="form-group">
-								<label for="name">Nombre</label>
-								<input type="text" id="name" name="name" required>
-							</div>
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" id="email" name="email" required>
-							</div>
-							<div class="form-group">
-								<label for="message">Mensaje</label>
-								<textarea id="message" name="message" rows="5" required></textarea>
-							</div>
-							<button type="submit" class="btn btn--primary">Enviar mensaje</button>
-						</form>
 					</div>
 				</div>
 			</section>

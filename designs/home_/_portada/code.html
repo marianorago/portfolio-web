@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mariano Rago - Design &amp; Architecture</title>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eca413",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221c10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative min-h-screen w-full">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/50 z-10"></div>
+<img alt="Featured architectural project" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6JXEueyxC_vhWetsocW974CQ71frK_Ey7Xyxs8Yu-yij61I9lh5xy0JuxiNDtWeeemsY8Y0sLYmwrIJAYSj_QIAWwaxvyU2AK0AxtoEOIplntpBNQwm13w1uwPPUM9xqRvL3m7vDWaJ-LtO2XWvmCmZQbBS7MYevjPlwkimht0X9vuLWFrSqvHOgubdKvE_wvk-i6rfFgD7tvb75SXoi4Z_6-rGg_oZH-iO4KAr3gXir4uHFwAuRV3Xzv3T4CIdq0-DrLVxW3iEXn"/>
+</div>
+<header class="absolute top-0 left-0 right-0 z-20 p-8">
+<div class="container mx-auto flex justify-between items-center">
+<h2 class="text-xl font-bold text-white">Mariano Rago</h2>
+<nav class="hidden md:flex space-x-8">
+<a class="text-white hover:text-primary transition-colors" href="#">Proyectos</a>
+<a class="text-white hover:text-primary transition-colors" href="#">Sobre Mí</a>
+<a class="text-white hover:text-primary transition-colors" href="#">Contacto</a>
+</nav>
+<button class="md:hidden text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</header>
+<main class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center text-white p-4">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                    Diseñamos espacios que inspiran
+                </h1>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="inline-block bg-primary text-background-dark dark:text-background-dark font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-colors" href="#">
+                        Ver proyectos
+                    </a>
+<a class="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-white hover:text-background-dark transition-colors" href="#">
+                        Contáctame
+                    </a>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
